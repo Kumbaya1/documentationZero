@@ -1,10 +1,9 @@
 import React from 'react';
-import { DatePicker } from 'antd';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <DatePicker />
+      {props.children}
     </div>
   );
 }
