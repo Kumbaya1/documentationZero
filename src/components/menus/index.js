@@ -59,6 +59,7 @@ class Menus extends React.Component {
         this.state = {
             menuList:[],
             collapsed: false,
+            activeKey:["/"]
         }
     }
     componentWillMount(){
@@ -99,7 +100,10 @@ class Menus extends React.Component {
         //     collapsed:!this.state.collapsed
         // })
     }
-    handleClickMenuItem = ({key})=>{
+    handleClickMenuItem = ({key,keyPath})=>{
+        this.setState({
+            activeKey:keyPath
+        })
         this.props.history.push(key)
     }
     render(){
@@ -109,7 +113,7 @@ class Menus extends React.Component {
                     <img src={Logo} alt="logo" className="logo" onClick={this.toggleCollapsed} />
                     <span>技术创新中心</span>
                 </h1>
-                 <Menu  mode="inline" style={{border:0}} onClick={this.handleClickMenuItem}>
+                 <Menu  mode="inline" style={{border:0}} onClick={this.handleClickMenuItem} selectedKeys={this.state.activeKey}>
                     {this.state.menuList}
                 </Menu>
             </div> 

@@ -2,8 +2,7 @@ import React from 'react';
 
 export default function Env(props){
     return (
-        <div>
-            this is env
+        <div className="wrap">
             {props.children}
         </div>
     )

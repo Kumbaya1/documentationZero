@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Explain(props){
     return (
-        <div>
+        <div className="wrap">
             这是说明
             {props.children}
         </div>

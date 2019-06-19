@@ -1,10 +1,56 @@
-.container{
+.container {
     display: flex;
 }
-.nav{
+
+.nav {
     width: 240px;
+    position: relative;
+    transition: all .3s linear;
 }
-.main{
+
+.shirnk {
+    margin-left: -240px;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 0;
+    left: 240px;
+    z-index: 1;
+}
+
+.main {
     flex: 1;
     width: 0;
+}
+
+.App {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px 15px 40px;
+    position: relative;
+}
+
+.wrap h2 {
+    font-size: 30px;
+}
+
+.wrap h3 {
+    font-size: 24px;
+}
+
+.wrap h2, .wrap h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.wrap p {
+    margin: 10px 0;
 }
