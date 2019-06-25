@@ -1,5 +1,6 @@
 import React from "react"
 import App from "./App"
+import { Icon } from "antd"
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Menus from "./components/menus"
 import Home from "./page/home"
@@ -12,9 +13,10 @@ import Explain from './page/explain'
 import EProcess from './page/explain/process'   // 2.1 系统操作流程
 import ELogin from './page/explain/login'       // 2.2 登录
 import EHome from './page/explain/home'         // 2.3 首页
-import EFruit from './page/explain/fruit'       // 2.4 我的成果
-import EProject from './page/explain/project'   // 2.5 我的项目
+import EManagement from './page/explain/management'       // 2.4 项目管理
+import EModel from './page/explain/model'   // 2.5 算法模型
 import EAnalysis from './page/explain/analysis' // 2.6 分析制图
+import EDataresource from './page/explain/dataresource' // 2.7 数据资源
 // 404页面
 import NotFound from './page/notfound'
 export default class IRouter extends React.Component {
@@ -31,7 +33,10 @@ export default class IRouter extends React.Component {
             <HashRouter>
                 <div className="container">
                     <div className={this.state.isShirnk ? 'shirnk nav' : 'nav'}>
-                        <button className="toggle-btn" onClick={this.toggleNav}>切换</button>
+                        <div className="toggle-btn" onClick={this.toggleNav} >
+                            {/* <Icon type={this.state.isShirnk?'double-right':'double-left'} /> */}
+                            <Icon type="unordered-list" />
+                        </div>
                         <Menus />
                     </div>
                     <div className="main">
@@ -61,9 +66,10 @@ export default class IRouter extends React.Component {
                                                 <Route path="/explain/process" component={EProcess}></Route>
                                                 <Route path="/explain/login" component={ELogin}></Route>
                                                 <Route path="/explain/home" component={EHome}></Route>
-                                                <Route path="/explain/fruit" component={EFruit}></Route>
-                                                <Route path="/explain/project" component={EProject}></Route>
+                                                <Route path="/explain/management" component={EManagement}></Route>
                                                 <Route path="/explain/analysis" component={EAnalysis}></Route>
+                                                <Route path="/explain/model" component={EModel}></Route>
+                                                <Route path="/explain/dataresource" component={EDataresource}></Route>
                                             </Switch>
                                         </Explain>
                                     )

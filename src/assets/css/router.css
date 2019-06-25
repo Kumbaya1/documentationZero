@@ -17,6 +17,7 @@
     top: 0;
     left: 240px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .main {
@@ -51,6 +52,30 @@
     line-height: 1.1;
 }
 
+.wrap h4, .wrap h5 {
+    line-height: 1.1;
+    margin: 10px 0;
+}
+
+.wrap h4 {
+    font-size: 18px;
+}
+
+.wrap h5 {
+    font-size: 15px;
+}
+
 .wrap p {
     margin: 10px 0;
+    font-size: 15px;
+}
+
+.wrap img {
+    max-width: 100%;
+    max-height: 500px;
+}
+
+.wrap .icon-img {
+    width: 25px;
+    vertical-align: text-bottom;
 }
