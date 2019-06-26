@@ -19,6 +19,8 @@ import EAnalysis from './page/explain/analysis' // 2.6 分析制图
 import EDataresource from './page/explain/dataresource' // 2.7 数据资源
 // 404页面
 import NotFound from './page/notfound'
+// 返回顶部组件
+import ReaurnTop from './components/top'
 export default class IRouter extends React.Component {
     state = {
         isShirnk: false
@@ -41,8 +43,8 @@ export default class IRouter extends React.Component {
                     </div>
                     <div className="main">
                         <App>
+                            <ReaurnTop />
                             <Switch>
-
                                 <Route path="/" component={Home} exact></Route>
                                 <Route path="/env" render={() => {
                                     return (
@@ -52,6 +54,7 @@ export default class IRouter extends React.Component {
                                                     return (<Redirect to='/env/certificate'></Redirect>)
                                                 }}></Route>
                                                 <Route path="/env/certificate" component={Certificate}></Route>
+                                                <Route component={NotFound}></Route>
                                             </Switch>
                                         </Env>
                                     )
@@ -70,6 +73,7 @@ export default class IRouter extends React.Component {
                                                 <Route path="/explain/analysis" component={EAnalysis}></Route>
                                                 <Route path="/explain/model" component={EModel}></Route>
                                                 <Route path="/explain/dataresource" component={EDataresource}></Route>
+                                                <Route component={NotFound}></Route>
                                             </Switch>
                                         </Explain>
                                     )
@@ -79,7 +83,7 @@ export default class IRouter extends React.Component {
                         </App>
                     </div>
                 </div>
-            </HashRouter>
+            </HashRouter >
         )
     }
 }

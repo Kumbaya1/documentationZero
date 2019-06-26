@@ -1,0 +1,85 @@
+.error-title {
+    text-align: center;
+    margin: 30px 15px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    color: #92a4ad;
+    font-size: 24px;
+}
+
+.error-container{
+    text-align: center;
+    letter-spacing: 0.5rem;
+    
+}
+.danc1,.danc2,.danc3{
+    font-size: 90px;
+    font-weight: 800;
+}
+.danc1 {
+    animation: colordancing 4s infinite;
+}
+
+.danc2 {
+    animation: colordancing2 4s infinite;
+}
+
+.danc3 {
+    animation: colordancing3 4s infinite;
+}
+.return-home{
+    text-align: center;
+    margin-top: 20px;
+}
+@keyframes colordancing {
+    0% {
+        color: #D1F2A5;
+    }
+    25% {
+        color: #F56991;
+    }
+    50% {
+        color: #FFC48C;
+    }
+    75% {
+        color: #EFFAB4;
+    }
+    100% {
+        color: #D1F2A5;
+    }
+}
+
+@keyframes colordancing2 {
+    0% {
+        color: #FFC48C;
+    }
+    25% {
+        color: #EFFAB4;
+    }
+    50% {
+        color: #D1F2A5;
+    }
+    75% {
+        color: #F56991;
+    }
+    100% {
+        color: #FFC48C;
+    }
+}
+
+@keyframes colordancing3 {
+    0% {
+        color: #D1F2A5;
+    }
+    25% {
+        color: #EFFAB4;
+    }
+    50% {
+        color: #FFC48C;
+    }
+    75% {
+        color: #EFFAB4;
+    }
+    100% {
+        color: #F56991;
+    }
+}

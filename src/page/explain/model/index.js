@@ -20,19 +20,6 @@ export default function Model() {
             <img src={img3} alt="" style={{width:'40%'}} />
             <h5>2.6.2.5	如有模型需求，可点击右上角【模型需求】按钮，进行模型需求提交</h5>
             <img src={img4} alt="" style={{width:'40%'}} />
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     )
 }
